@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ReactiveSpringAppApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ReactiveSpringAppApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ReactiveSpringAppApplication.class, args);
+    }
 
 }
