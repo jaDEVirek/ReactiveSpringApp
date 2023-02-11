@@ -13,11 +13,11 @@ public class SportRouter {
 
     @Bean
     public RouterFunction<ServerResponse> route(SportService sportService) {
-        return RouterFunctions.route(RequestPredicates.GET("/api/v1/sport/{sportname}"),
+        return RouterFunctions.route(RequestPredicates.GET("/api/v1/sports/{sportname}"),
                         sportService::fetchSingleSport)
-                .andRoute(RequestPredicates.GET("/api/v1/sport"),
-                        sportService::fetchSingleSport)
-                .andRoute(RequestPredicates.POST("/api/v1/sport/{sportName}"),
+                .andRoute(RequestPredicates.GET("/api/v1/sports"),
+                        sportService::fetchAllSports)
+                .andRoute(RequestPredicates.POST("/api/v1/sports/{sportName}"),
                         sportService::createSportForName);
     }
 }
